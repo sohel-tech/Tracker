@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { StyleSheet } from 'react-native';
 import { Text } from 'react-native-elements';
 import Map from '../components/Map';
 import { SafeAreaView } from 'react-navigation';
+import { requestPermissionsAsync } from 'expo-location';
 
 
 const TrackCreateScreen = () => {

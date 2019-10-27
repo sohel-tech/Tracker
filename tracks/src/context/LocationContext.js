@@ -1,5 +1,4 @@
 import createDataContext from './createDataContext';
-import { State } from 'react-native-gesture-handler';
 
 const locationReducer = (state, action) => {
     switch (action.type) {
@@ -13,6 +12,7 @@ const locationReducer = (state, action) => {
 const startRecoding = dispatch => () => { };
 const stopRecording = dispatch => () => { };
 const addLocation = dispatch => (location) => {
+    console.log('Hi There');
     dispatch({ type: 'add_current_location', payload: location });
 };
 

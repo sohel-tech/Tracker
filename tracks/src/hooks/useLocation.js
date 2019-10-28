@@ -6,9 +6,6 @@ export default (shouldTrack, callback) => {
 
     const [err, setErr] = useState(null);
 
-
-
-
     useEffect(() => {
         let subscriber;
         const startWatching = async () => {
@@ -16,7 +13,7 @@ export default (shouldTrack, callback) => {
                 await requestPermissionsAsync();
                 subscriber = await watchPositionAsync({
                     accuracy: Accuracy.BestForNavigation,
-                    timeInterval: 2000,
+                    timeInterval: 1000,
                     distanceInterval: 10
                 },
                     callback
